@@ -67,17 +67,18 @@ above as follows:
 ```rb
 dog = "cuddly"
 
-owner = if dog == "hungry"
-          "Refilling food bowl."
-        elsif dog == "thirsty"
-          "Refilling water bowl."
-        elsif dog == "playful"
-          "Playing tug-of-war."
-        elsif dog == "cuddly"
-          "Snuggling."
-        else
-          "Reading newspaper."
-        end
+owner =
+  if dog == "hungry"
+    "Refilling food bowl."
+  elsif dog == "thirsty"
+    "Refilling water bowl."
+  elsif dog == "playful"
+    "Playing tug-of-war."
+  elsif dog == "cuddly"
+    "Snuggling."
+  else
+    "Reading newspaper."
+  end
 ```
 
 ## `unless` Statements
@@ -88,9 +89,7 @@ as the opposite of `if`:
 ```rb
 timer = 15
 
-unless timer == 0
-  puts "Still cooking"
-end
+puts "Still cooking" unless timer == 0
 ```
 
 You could write the equivalent with an `if` statement and a negative condition:
@@ -98,9 +97,7 @@ You could write the equivalent with an `if` statement and a negative condition:
 ```rb
 timer = 15
 
-if timer != 0
-  puts "Still cooking"
-end
+puts "Still cooking" if timer != 0
 ```
 
 But you'll find that the first example is a [bit nicer to read][if vs unless].
@@ -148,9 +145,7 @@ you could rewrite this example:
 
 ```rb
 this_year = Time.now.year
-if this_year == 2046
-  puts "Hey, it's 2046!"
-end
+puts "Hey, it's 2046!" if this_year == 2046
 ```
 
 Using a statement modifier:
@@ -227,18 +222,19 @@ we could refactor this Ruby example:
 ```rb
 dog = "cuddly"
 
-owner = case dog
-        when "hungry"
-          "Refilling food bowl."
-        when "thirsty"
-          "Refilling water bowl."
-        when "playful"
-          "Playing tug-of-war."
-        when "cuddly"
-          "Snuggling."
-        else
-          "Reading newspaper."
-        end
+owner =
+  case dog
+  when "hungry"
+    "Refilling food bowl."
+  when "thirsty"
+    "Refilling water bowl."
+  when "playful"
+    "Playing tug-of-war."
+  when "cuddly"
+    "Snuggling."
+  else
+    "Reading newspaper."
+  end
 ```
 
 You can also use `then` with `when` to shorten up each condition to a single line:
@@ -246,13 +242,19 @@ You can also use `then` with `when` to shorten up each condition to a single lin
 ```rb
 dog = "cuddly"
 
-owner = case dog
-        when "hungry" then "Refilling food bowl."
-        when "thirsty" then "Refilling water bowl."
-        when "playful" then "Playing tug-of-war."
-        when "cuddly" then "Snuggling."
-        else "Reading newspaper."
-        end
+owner =
+  case dog
+  when "hungry"
+    "Refilling food bowl."
+  when "thirsty"
+    "Refilling water bowl."
+  when "playful"
+    "Playing tug-of-war."
+  when "cuddly"
+    "Snuggling."
+  else
+    "Reading newspaper."
+  end
 ```
 
 ## Instructions
